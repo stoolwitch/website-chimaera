@@ -1,5 +1,13 @@
-head {
-    p{
-        color: blue;
+@font-face {
+    font-family: Gulax;
+    src: url(../media/fonts/Gulax/Gulax-Regular.woff2);
+}
+
+#navBar {
+    a {
+        text-decoration: none;
+    }
+    a:first-of-type {
+        font-family: 'Gulax', sans-serif;
     }
 }

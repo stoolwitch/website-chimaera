@@ -1,1 +1,10 @@
-head p{color:#000}
+@font-face {
+  font-family: Gulax;
+  src: url(../media/fonts/Gulax/Gulax-Regular.woff2);
+}
+#navBar a {
+  text-decoration: none;
+}
+#navBar a:first-of-type {
+  font-family: "Gulax", sans-serif;
+}/*# sourceMappingURL=global-style.css.map */
