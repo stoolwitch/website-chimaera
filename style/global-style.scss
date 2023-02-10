@@ -1,13 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
 @font-face {
     font-family: Gulax;
     src: url(../media/fonts/Gulax/Gulax-Regular.woff2);
 }
 
 #navBar {
+    width: 100%;
+    box-shadow: 0.3em 0.3em 2em #AAA;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
     a {
         text-decoration: none;
+        font-family: sans-serif;
+        color: black;
+        font-size: 1.5em;
+        padding: 0.7em;
+        margin: 0.3em;
+        transition-duration: 0.2s;
+        border-radius: 0.3em;
+        box-shadow: 0px 0px;
+    }
+    a:hover:not(:first-of-type) {
+        margin-top: -10px;
+        background-color: #aaa;
+        transition-duration: 0.2s;
+        box-shadow: 0px 10px;
+    }
+    a:active:not(:first-of-type) {
+        margin-top: 10px;
+        background-color: #444;
+        transition-duration: 0.2s;
+        box-shadow: 0px 0px;
     }
     a:first-of-type {
         font-family: 'Gulax', sans-serif;
+        font-size: 2.5em;
+    }
+    a:last-of-type {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    #navBar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+
+    a:last-of-type {
+        margin-left: 0.3em;
+    }
+    }
+}
+
+#sideNav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-color: green;
+    width: 10px;
+    height: 100vh;
+    a {
+        width: 3em;
+        height: 3em;
+        background-color: red;
     }
 }
