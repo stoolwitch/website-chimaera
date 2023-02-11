@@ -61,20 +61,20 @@
     margin-left: 0.3em;
   }
 }
-#sideNav {
+.side-nav {
   position: fixed;
   left: 0;
   top: 0;
   background-color: green;
   width: 6em;
   height: 100vh;
-  margin-left: -5em;
   transition-duration: 0.2s;
   display: flex;
+  transform: translateX(-7em);
   flex-direction: column;
   justify-content: flex-start;
 }
-#sideNav a {
+.side-nav a {
   margin: 1em;
   margin-bottom: 0;
   height: 4em;
@@ -85,7 +85,21 @@
   align-items: center;
 }
 
-#sideNav:hover {
-  margin-left: 0;
+.side-nav:hover {
+  transform: translateX(0) !important;
   transition-duration: 0.2s;
+}
+
+.side-nav.active {
+  transform: translateX(-5em);
+}
+
+#landingVisual {
+  height: calc(100vh - 7.5em);
+  background-color: #AAA;
+}
+
+#secondVisual {
+  height: 100vh;
+  background-color: #AAA;
 }/*# sourceMappingURL=global-style.css.map */
