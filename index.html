@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/global-style.css">
+    <link rel="stylesheet" href="style/floatingitems.css">
     <title>Nyx Chimæra</title>
 </head>
-<body>
+<body onload="onLoad()">
 
         <nav id="navBar">
             <a href="#">Chimæra</a>
@@ -21,18 +22,19 @@
                 <p>agagougou</p>
             </article>
         </section>
-        <section id="secondVisual">
-            <article>
-                <h1>slaaay</h1>
-                <p>agagougou</p>
-            </article>
+        <section id="floatingItems" loading="lazy" w3-include-html="floatingitems.html">
+            
         </section>
 
         <nav class="side-nav">
-            <a href="#article1"><p>1</p></a>
-            <a href="#article1"><p>2</p></a>
+            <a href="#floatingItems"><p>1</p></a>
+            <a href="#"><p>2</p></a>
         </nav>
-
+        <script src="scripts/init.js"></script>
+        <script src="scripts/addhtml.js"></script>
         <script src="scripts/sidenavreveal.js"></script>
+        <script src="scripts/randomfloatertrans.js"></script>
+
+        
 </body>
 </html>
