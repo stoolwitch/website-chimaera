@@ -1,31 +1,44 @@
 
 #floatingContainer {
+  pointer-events: none;
     width: 100vw;
-    height: 99vh;
+    height: 100vh;
     overflow: hidden;
-    background-color: azure;
     display: flex;
-    justify-content: center;
     align-items: center;
-    perspective: 800px; 
-    transform-style: preserve-3d;
+    justify-content: center;
     a {
       align-self: flex-start;
-      z-index: 10;
+      pointer-events: all;
     }
     #floater {
-        width: 10rem;
-        height: 10rem;
+      width: 10px;
+      height: 10px;
+       background-color: red;
         animation: floatbacknforth 20s infinite;
         transform-style: preserve-3d;
-        transform: translate3d(0,0,10rem);
+        perspective:200px ;
+
+    transform:translateZ(-100000px);
+        position: absolute;
         .floating-cards {
-            width: 12rem;
-            height: 20rem;
             position: absolute;
-            background-color: aqua;
-            border-radius: 1rem;
+            transform-origin: center;
+            pointer-events: all;
+            .card-visual {
+              width: 6rem;
+              height: 10rem;
+              border-radius: 1rem;
+              background-color: aquamarine;
+              transition: 0.2s ease-in-out;
+              background-clip: padding-box;
+            }
+            .card-visual:hover {
+              transform-origin: center;
+              transform: scale(1.1);
+            }
         }
+        
     }
 }
 
